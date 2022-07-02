@@ -7,17 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>演示</title>
     <style>
-        * {
-            margin: 10px;
-            border: 1px #000 solid;
-        }
-
         body {
             height: 100vh;
         }
 
         .flex {
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .table {
@@ -27,15 +25,36 @@
             margin-right: auto;
         }
 
+        .wall {
+            width: 230px;
+            height: 30px;
+            margin-top: 10px;
+            border: 2px solid #000;
+        }
+
         .tureTable {
             background: rgb(81, 255, 0);
+            border-radius: 0px 0px 6px 6px;
+        }
+
+        .false {
+            margin-top: 50px;
+            border: #000 solid 1px;
         }
     </style>
 </head>
 
 <body style="border: none; margin: 0px">
     <div class="flex">
-        <div class="table tureTable"></div>
+        <h1>正确的</h1>
+        <h2>边缘有不明显的圆角</h2>
+        <div class="wall flex">
+            这是墙
+        </div>
+        <div class="table tureTable flex">
+            这是桌子
+        </div>
+        <div class="flex false"></div>
     </div>
 </body>
 
